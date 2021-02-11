@@ -1,11 +1,11 @@
 package Calculator;
 
-import org.testng.Assert;
+
 import org.testng.annotations.Test;
 
 public class CalculatorWithTestNG {
     @Test
-    public static void main(String[] args) {
+    public void calculatorWithTestNG() {
         int operand1,operand2;
         String  action="add";String result;
         OperationsWithTestNG operations=new OperationsWithTestNG(action);
