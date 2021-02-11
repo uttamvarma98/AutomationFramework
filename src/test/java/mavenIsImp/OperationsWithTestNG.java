@@ -6,6 +6,7 @@ public class OperationsWithTestNG {
     String result;
 
     OperationsWithTestNG(String action) {
+
         this.action = action;
     }
 
