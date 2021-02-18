@@ -30,7 +30,7 @@ public class BusinessLogicForAutomatingAddToCart extends ExecutableForAutomating
         driver.findElement(By.cssSelector("#shopping_cart_container > a > svg > path")).click();
         identifyProductInCart();
     }
-    private void identifyProductInCart() throws InterruptedException {
+    private void identifyProductInCart() throws InterruptedException{
         WebDriverWait wait=new WebDriverWait(driver,15);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div/div[2]/div[3]/div/div[1]/div[3]/div[2]/a/div")));
         Thread.sleep(2000);
