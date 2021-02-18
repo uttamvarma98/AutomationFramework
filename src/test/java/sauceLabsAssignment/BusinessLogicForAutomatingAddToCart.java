@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BusinessLogicForAutomatingAddToCart extends BrowserSetUp {
-    String username,password;
+public class BusinessLogicForAutomatingAddToCart extends ExecutableForAutomatingAddToCart {
+    private String username,password;
     BusinessLogicForAutomatingAddToCart(String username1,String password1) {
         this.username = username1;
         this.password = password1;
@@ -24,20 +24,20 @@ public class BusinessLogicForAutomatingAddToCart extends BrowserSetUp {
         addTheProductToCart();
         return  "Automating Add To Cart Feature Is Done Successfully";
     }
-    public void addTheProductToCart() throws InterruptedException {
+    private void addTheProductToCart() throws InterruptedException {
 
         driver.findElement(By.xpath("//*[@id=\"inventory_container\"]/div/div[1]/div[3]/button")).click();
         driver.findElement(By.cssSelector("#shopping_cart_container > a > svg > path")).click();
         identifyProductInCart();
     }
-    public void identifyProductInCart() throws InterruptedException {
+    private void identifyProductInCart() throws InterruptedException {
         WebDriverWait wait=new WebDriverWait(driver,15);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div/div[2]/div[3]/div/div[1]/div[3]/div[2]/a/div")));
         Thread.sleep(2000);
         System.out.println("Item located In Cart");
         browserTerminator();
     }
-    public void browserTerminator(){
+    private void browserTerminator(){
 
         driver.quit();
 
