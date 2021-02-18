@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SauceLabs" />
+        <module name="MavenIsImp" />
         <module name="Assessments" />
         <module name="Calculator" />
-        <module name="MavenIsImp" />
       </profile>
     </annotationProcessing>
   </component>
