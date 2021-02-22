@@ -49,7 +49,7 @@ public class BusinessLogicForAutomatingAddToCart extends ExecutableForAutomating
     public String browserTerminator(){
 
         driver.quit();
-        return "Closed the browser succesfully";
+        return "Closed the browser successfully";
 
     }
 }
