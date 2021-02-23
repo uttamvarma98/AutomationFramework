@@ -34,7 +34,7 @@ public class BusinessLogicForAutomatingAddToCart1 extends ExecutableForAutomatin
 
         locatorsOfSauceLabs.browserTerminator();
 
-        return "Automating Add to cart is done succesfully";
+        return "Automating product add to cart is done successfully";
 
     }
 
