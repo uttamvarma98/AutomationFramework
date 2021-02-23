@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LocatorsOfSauceLabs{
+public class LocatorsOfSauceLabs extends BusinessLogicForAutomatingAddToCart1{
 
-    WebDriver driver;
+    //WebDriver driver;
 
     By user_name=By.xpath("/html/body/div[2]/div[1]/div/div/form/input[1]");
     By pass_word=By.cssSelector("#password");
@@ -20,14 +20,12 @@ public class LocatorsOfSauceLabs{
     By identifyProductInCart=By.xpath("/html/body/div/div[2]/div[3]/div/div[1]/div[3]/div[2]/a/div");
 
 
-    public LocatorsOfSauceLabs(WebDriver driver){
+    /*public LocatorsOfSauceLabs(WebDriver driver){
         this.driver=driver;
-    }
+    }*/
 
     public void typeUserName(String username){
-
-
-        driver.get("https://www.saucedemo.com/index.html");
+        chromeBrowser();
 
         driver.findElement(user_name).clear();
         driver.findElement(user_name).sendKeys(username);
