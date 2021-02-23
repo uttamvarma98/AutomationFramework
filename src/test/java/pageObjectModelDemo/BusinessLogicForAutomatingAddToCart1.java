@@ -4,21 +4,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BusinessLogicForAutomatingAddToCart1 extends ExecutableForAutomatingAddToCart1 {
-    WebDriver driver;
+  //  WebDriver driver;
 
 
-    public void businessLogic() throws InterruptedException {
+    public String businessLogic() throws InterruptedException {
 
-
-        System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
+        /*System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
 
         driver=new ChromeDriver();
         LocatorsOfSauceLabs locatorsOfSauceLabs=new LocatorsOfSauceLabs(driver);
 
 
-        driver.manage().window().maximize();
+        driver.manage().window().maximize();*/
 
 
+        LocatorsOfSauceLabs locatorsOfSauceLabs=new LocatorsOfSauceLabs();
 
         locatorsOfSauceLabs.typeUserName("standard_user");
 
@@ -35,6 +35,7 @@ public class BusinessLogicForAutomatingAddToCart1 extends ExecutableForAutomatin
 
         locatorsOfSauceLabs.browserTerminator();
 
+        return "Automating product add to cart is done successfully";
 
     }
 
