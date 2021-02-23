@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class BrowserSetUp {
 
     public WebDriver driver;
-
+@BeforeMethod
     public void chromeBrowser(){
 
         System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
@@ -16,6 +16,7 @@ public class BrowserSetUp {
         driver=new ChromeDriver();
 
         driver.manage().window().maximize();
+    driver.get("https://www.saucedemo.com/index.html");
 
     }
 }
