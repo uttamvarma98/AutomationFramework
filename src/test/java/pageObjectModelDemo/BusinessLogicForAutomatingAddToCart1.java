@@ -7,8 +7,7 @@ public class BusinessLogicForAutomatingAddToCart1 extends ExecutableForAutomatin
     WebDriver driver;
 
 
-    public void businessLogic() throws InterruptedException {
-
+    public String businessLogic() throws InterruptedException {
 
         System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
 
@@ -35,6 +34,7 @@ public class BusinessLogicForAutomatingAddToCart1 extends ExecutableForAutomatin
 
         locatorsOfSauceLabs.browserTerminator();
 
+        return "Automating Add to cart is done succesfully";
 
     }
 
