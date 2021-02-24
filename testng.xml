@@ -3,7 +3,7 @@
 <suite name="annotationsPackage" parallel="tests">
     <test name="AnnotationsLearn">
         <classes>
-            <class name="sauceLabsAssignment.ExecutableForAutomatingAddToCart"/>
+            <class name="swagLabsPackage.ExecutableForAutomatingAddToCart"/>
         </classes>
     </test>
 </suite>
