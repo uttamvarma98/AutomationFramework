@@ -4,7 +4,6 @@
     <test name="SwagLabs">
         <classes>
             <class name="swagLabsPackage.AutomateProductAddToCartInSwagLabs"/>
-             <class name="swagLabsPackage.BrowserSetUp"/>
         </classes>
     </test> <!-- SauceLabs -->
 </suite> <!-- Default Suite -->
