@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+    <parameter name="browser" value="ChromeBrowser"/>
+    <parameter name="usernameOfUser" value="standard_user" />
+    <parameter name="passwordOfUser" value="secret_sauce"/>
+    <test name="SauceLabs">
+        <classes>
+            <class name="sauceLabsAssignment.AutomateProductAddToCartInSauceLabs"/>
+             <class name="sauceLabsAssignment.BrowserSetUp"/>
+        </classes>
+    </test> <!-- SauceLabs -->
+</suite> <!-- Default Suite -->

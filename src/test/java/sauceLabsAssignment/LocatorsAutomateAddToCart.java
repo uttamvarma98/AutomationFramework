@@ -18,7 +18,7 @@ public class LocatorsAutomateAddToCart {
         this.driver=driver;
     }
     public void typeUsername(String username){
-        driver.get("https://www.saucedemo.com/index.html");
+
         driver.findElement(user_name).sendKeys(username);
     }
     public void typePassword(String password){
