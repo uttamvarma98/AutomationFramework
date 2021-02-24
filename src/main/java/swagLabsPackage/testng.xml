@@ -5,8 +5,8 @@
     <parameter name="passwordOfUser" value="secret_sauce"/>
     <test name="SauceLabs">
         <classes>
-            <class name="sauceLabsAssignment.AutomateProductAddToCartInSauceLabs"/>
-             <class name="sauceLabsAssignment.BrowserSetUp"/>
+            <class name="swagLabsPackage.AutomateProductAddToCartInSauceLabs"/>
+             <class name="swagLabsPackage.BrowserSetUp"/>
         </classes>
     </test> <!-- SauceLabs -->
 </suite> <!-- Default Suite -->

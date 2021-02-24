@@ -1,4 +1,4 @@
-package sauceLabsAssignment;
+package swagLabsPackage;
 
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -17,5 +17,7 @@ public class AutomateProductAddToCartInSauceLabs extends BrowserSetUp {
         locatorsAutomateAddToCart.clickCartContainer();
         locatorsAutomateAddToCart.identifyBackPackOnCart();
         locatorsAutomateAddToCart.browserTerminate();
+
+
     }
 }
