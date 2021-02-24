@@ -3,7 +3,7 @@
     <parameter name="browser" value="ChromeBrowser"/>
     <test name="SwagLabs">
         <classes>
-            <class name="swagLabsPackage.AutomateProductAddToCartInSauceLabs"/>
+            <class name="swagLabsPackage.AutomateProductAddToCartInSwagLabs"/>
              <class name="swagLabsPackage.BrowserSetUp"/>
         </classes>
     </test> <!-- SauceLabs -->
