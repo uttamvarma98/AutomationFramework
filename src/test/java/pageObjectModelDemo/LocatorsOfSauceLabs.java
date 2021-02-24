@@ -14,9 +14,11 @@ public class LocatorsOfSauceLabs  {
         this.driver=driver;
     }
     public void typeUserName(){
+
         driver.findElement(username).sendKeys("standard_user");
     }
     public void typePassword(){
+
         driver.findElement(password).sendKeys("secret_sauce");
     }
     public void clickLoginButton(){

@@ -16,7 +16,7 @@ public class BrowserSetUp {
         driver=new ChromeDriver();
 
         driver.manage().window().maximize();
-    driver.get("https://www.saucedemo.com/index.html");
+
 
     }
 }
