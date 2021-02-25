@@ -1,9 +1,10 @@
 package swagLabsPackage;
 
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
+import swagLabsPackage1.BrowserSetUp;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -19,3 +20,4 @@ public class TestDataOfSwagLabs extends BrowserSetUp {
         password=properties.getProperty("password");
     }
 }
+

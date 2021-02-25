@@ -2,53 +2,111 @@ package swagLabsPackage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 public class LocatorsAutomateAddToCart {
     WebDriver driver;
-    By user_name=By.id("user-name");
-    By pass_word=By.id("password");
-    By loginButton=By.xpath("//input[@type='submit']");
-    By addToCart=By.xpath("//div[@id=\"inventory_container\"]/div/div[1]//button");
-    By cartContainer=By.cssSelector("path[fill='currentColor']");
-    By backPack=By.xpath("//div[@class='inventory_item_name']");
-    By removeButton=By.xpath("//button[@class='btn_secondary cart_button']");
-    By continueShoppingButton=By.xpath("//a[@class='btn_secondary']");
-    By findProductsPage=By.cssSelector("div[class='peek']");
 
-    public LocatorsAutomateAddToCart(WebDriver driver){
-        this.driver=driver;
+    public LocatorsAutomateAddToCart(WebDriver driver1){
+        this.driver=driver1;
+        PageFactory.initElements(driver1,this);
     }
+
+    @FindBy(id = "user-name")
+    @CacheLookup
+    WebElement user_name;
+
+    @FindBy(id = "password")
+    @CacheLookup
+    WebElement pass_word;
+
+    @FindBy(xpath = "//input[@type='submit']")
+    @CacheLookup
+    WebElement loginButton;
+
+    @FindBy(how = How.XPATH,using = "//div[@id=\"inventory_container\"]/div/div[1]//button")
+    @CacheLookup
+    WebElement addToCart;
+
+    @FindBy(how=How.CSS,using = "path[fill='currentColor']")
+    @CacheLookup
+    WebElement cartContainer;
+
+    @FindBy(xpath = "//div[@class='inventory_item_name']")
+    @CacheLookup
+    WebElement backPack;
+
+    @FindBy(how=How.XPATH,using= "//button[@class='btn_secondary cart_button']")
+    @CacheLookup
+    WebElement removeButton;
+
+    @FindBy(how=How.XPATH,using= "//a[@class='btn_secondary']")
+    @CacheLookup
+    WebElement continueShoppingButton;
+
+    @FindBy(how=How.CSS,using = "div[class='peek']")
+    @CacheLookup
+    WebElement findProductsPage;
+
     public void typeUsername(String username){
-        driver.get("https://www.saucedemo.com/index.html");
-        driver.findElement(user_name).sendKeys(username);
+
+        driver.get("https://www.saucedemo.com/");
+        user_name.sendKeys(username);
+
     }
     public void typePassword(String password){
-        driver.findElement(pass_word).sendKeys(password);
+
+        pass_word.sendKeys(password);
     }
     public void clickLoginButton(){
-        driver.findElement(loginButton).click();
+
+        loginButton.click();
+
     }
     public void clickAddToCart(){
-        driver.findElement(addToCart).click();
+
+        addToCart.click();
     }
     public void clickCartContainer(){
-        driver.findElement(cartContainer).click();
+
+        cartContainer.click();
     }
     public void identifyBackPackOnCart(){
-        WebDriverWait wait=new WebDriverWait(driver,15);
-        wait.until(ExpectedConditions.presenceOfElementLocated(backPack));
+        WebDriverWait wait = new WebDriverWait(driver, 15);
+        try {
+
+            wait.until(ExpectedConditions.presenceOfElementLocated((By) backPack));
+        }
+        catch (Exception e){
+            By backPack=By.xpath("//div[@class='inventory_item_name']");
+            wait.until(ExpectedConditions.presenceOfElementLocated(backPack));
+        }
+
     }
     public void clickRemoveButton(){
-        driver.findElement(removeButton).click();
+
+        removeButton.click();
     }
     public void clickContinueShoppingButton(){
-        driver.findElement(continueShoppingButton).click();
+
+        continueShoppingButton.click();
     }
     public void findProductsPage(){
         WebDriverWait wait=new WebDriverWait(driver,30);
-        wait.until(ExpectedConditions.presenceOfElementLocated(findProductsPage));
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated((By) findProductsPage));
+        }
+        catch (Exception e){
+            By findProductsPage=By.cssSelector("div[class='peek']");
+            wait.until(ExpectedConditions.presenceOfElementLocated(findProductsPage));
+        }
     }
     public void browserTerminate(){
         driver.quit();

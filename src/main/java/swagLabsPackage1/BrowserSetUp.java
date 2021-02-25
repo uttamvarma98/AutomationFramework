@@ -1,4 +1,4 @@
-package swagLabsPackage;
+package swagLabsPackage1;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,4 +29,3 @@ public class BrowserSetUp {
 
     }
 }
-
