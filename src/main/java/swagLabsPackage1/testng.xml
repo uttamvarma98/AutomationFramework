@@ -6,7 +6,7 @@
     <test name="SauceLabs">
         <classes>
             <class name="swagLabsPackage.AutomateProductAddToCartInSwagLabs"/>
-             <class name="swagLabsPackage.BrowserSetUp"/>
+             <class name="swagLabsPackage1.BrowserSetUp"/>
         </classes>
     </test> <!-- SauceLabs -->
 </suite> <!-- Default Suite -->

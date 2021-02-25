@@ -1,0 +1,10 @@
+<suite name="Default Suite">
+    <parameter name="browser" value="ChromeBrowser"/>
+
+    <test name="SauceLabs">
+        <classes>
+            <class name="pageObjectModelDemo.LoginPageOfSauceLabs"/>
+            <class name="swagLabsPackage1.BrowserSetUp"/>
+        </classes>
+    </test> <!-- SauceLabs -->
+</suite> <!-- Default Suite -->
