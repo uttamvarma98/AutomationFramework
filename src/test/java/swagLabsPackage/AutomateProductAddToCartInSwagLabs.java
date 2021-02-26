@@ -2,7 +2,6 @@ package swagLabsPackage;
 
 import org.testng.annotations.Test;
 
-
 public class AutomateProductAddToCartInSwagLabs extends TestDataOfSwagLabs {
     @Test
 

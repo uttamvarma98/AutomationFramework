@@ -1,6 +1,5 @@
 package swagLabsPackage;
 
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import swagLabsPackage1.BrowserSetUp;
 

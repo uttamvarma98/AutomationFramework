@@ -21,39 +21,39 @@ public class LocatorsAutomateAddToCart {
 
     @FindBy(id = "user-name")
     @CacheLookup
-    WebElement user_name;
+    private WebElement user_name;
 
     @FindBy(id = "password")
     @CacheLookup
-    WebElement pass_word;
+    private WebElement pass_word;
 
     @FindBy(xpath = "//input[@type='submit']")
     @CacheLookup
-    WebElement loginButton;
+    private WebElement loginButton;
 
     @FindBy(how = How.XPATH,using = "//div[@id=\"inventory_container\"]/div/div[1]//button")
     @CacheLookup
-    WebElement addToCart;
+    private WebElement addToCart;
 
     @FindBy(how=How.CSS,using = "path[fill='currentColor']")
     @CacheLookup
-    WebElement cartContainer;
+    private WebElement cartContainer;
 
     @FindBy(xpath = "//div[@class='inventory_item_name']")
     @CacheLookup
-    WebElement backPack;
+    private WebElement backPack;
 
     @FindBy(how=How.XPATH,using= "//button[@class='btn_secondary cart_button']")
     @CacheLookup
-    WebElement removeButton;
+    private WebElement removeButton;
 
     @FindBy(how=How.XPATH,using= "//a[@class='btn_secondary']")
     @CacheLookup
-    WebElement continueShoppingButton;
+    private WebElement continueShoppingButton;
 
     @FindBy(how=How.CSS,using = "div[class='peek']")
     @CacheLookup
-    WebElement findProductsPage;
+    private WebElement findProductsPage;
 
     public void typeUsername(String username){
 
