@@ -10,7 +10,7 @@ public class LoginPage {
 
     public LoginPage(WebDriver driver) {
         System.out.println("Login Page"+driver);
-        this.driver=driver;
+        this.driver=driver ;
     }
 
     public void loginApplication(String username,String password){
